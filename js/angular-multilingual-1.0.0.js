@@ -331,7 +331,7 @@ var app = angular.module("app", ["ngRoute", "gettext"]);
 
 app.controller('MainCtrl', ['$scope', '$location', 'gettextCatalog', function($scope, $location, gettextCatalog) {
     // load the common translations for all pages
-    gettextCatalog.loadRemote("dist/lang/fr_CA_index.json");
+    gettextCatalog.loadRemote("lang/fr_CA_index.json");
 
     // reference to available, default and current languages
     $scope.languages = {
@@ -356,7 +356,7 @@ app.controller('MainCtrl', ['$scope', '$location', 'gettextCatalog', function($s
         gettextCatalog.setCurrentLanguage(lang);
         // if not the default language we need to load the translation for the page
         if (lang !== $scope.languages.default) {
-            gettextCatalog.loadRemote("dist/lang/" + lang + "_" + page + ".json");
+            gettextCatalog.loadRemote("lang/" + lang + "_" + page + ".json");
         }
     };
 
