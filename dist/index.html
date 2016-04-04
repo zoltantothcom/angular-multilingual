@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="app" ng-controller="MainCtrl">
+<head>
+	<title></title>
+	
+	<link rel="stylesheet" href="dist/css/angular-multilingual-1.0.0.min.css" />
+
+	<script src="dist/js/angular-multilingual-1.0.0.min.js"></script>
+</head>
+<body>
+	<a href="#/{{ languages.current }}/home" class="logo">
+		<img ng-src="img/logo_{{ languages.current }}.jpg" alt="{{ languages.current }}" />
+	</a>
+
+	<nav>
+		<ul class="nav-menu">
+			<li><a href="#/{{ languages.current }}/home" translate>Home</a></li>
+			<li><a href="#/{{ languages.current }}/about" translate>About</a></li>
+			<li><a href="#/{{ languages.current }}/contact" translate>Contact</a></li>
+		</ul>
+
+		<div class="nav-languages" ng-model="languages.current">
+			<button ng-click="switchLang('en')" ng-if="languages.current !== 'en'">English</button>
+			<button ng-click="switchLang('fr_CA')" ng-if="languages.current !== 'fr_CA'">Fran&ccedil;ais</button>
+		</div>
+	</nav>
+
+	<div ng-view class="container"></div>
+</body>
+</html>
