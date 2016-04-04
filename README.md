@@ -19,7 +19,7 @@ A simple base for kick start an AngularJS project in several languages using [`a
 
 ### Demo
 
-[http://zoltantothcom.github.io/angular-multilingual-app-foundation](http://zoltantothcom.github.io/vanilla-js-carousel)
+[http://zoltantothcom.github.io/angular-multilingual](http://zoltantothcom.github.io/angular-multilingual)
 
 
 ### License
